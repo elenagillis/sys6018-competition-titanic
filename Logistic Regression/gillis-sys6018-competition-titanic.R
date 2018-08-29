@@ -80,6 +80,6 @@ titanic.predict <- rep(0,418)
 titanic.predict[probs>0.5] <- 1 
 titanic.predict.merged <- as.data.frame(cbind(test$PassengerId, titanic.predict))
 names(titanic.predict.merged) <- c("PassengerId","Survived")
-write.table(titanic.predict.merged, file = "titanic_predict.csv", 
+write.table(titanic.predict.merged, file = "emg3sc_titanic_predict.csv", 
             row.names=F, col.names=T, sep=",")
 
